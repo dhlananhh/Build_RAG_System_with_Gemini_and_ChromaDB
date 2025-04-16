@@ -1,0 +1,6 @@
+pip install pypdf
+pip install google-generativeai
+pip install chromadb
+pip install typing
+pip install requests
+pip install load-dotenv
