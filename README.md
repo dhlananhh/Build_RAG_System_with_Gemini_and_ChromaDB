@@ -1,6 +1,6 @@
 # Build RAG System with Gemini and ChromaDB
 
-This repository contains the code for building a Retrieval-Augmented Generation (RAG) system. This system uses Google's Gemini Pro model and the ChromaDB vector database to answer questions based on the content of a PDF document.
+This repository contains the code for building a Retrieval-Augmented Generation (RAG) system. This system uses Google's Gemini Flash model and the ChromaDB vector database to answer questions based on the content of a PDF document.
 
 ## How It Works
 
