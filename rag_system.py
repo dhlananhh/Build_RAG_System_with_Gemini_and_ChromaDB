@@ -82,6 +82,7 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
         except Exception as e:
             print(f"Error generating embeddings: {e}")
             return [] * len(input)
+
 db_folder = "chroma_db"
 if not os.path.exists(db_folder):
     try:
@@ -142,7 +143,7 @@ def make_rag_prompt(query: str, relevant_passages: List[str]) -> str:
 
 def generate_answer(prompt: str) -> str:
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
