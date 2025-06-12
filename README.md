@@ -12,7 +12,7 @@ The system follows a standard RAG architecture:
 4.  **Vector Storage**: These embeddings are stored in a persistent ChromaDB collection. This process is only done once; on subsequent runs, the system loads the existing database.
 5.  **Querying**: When a user asks a question, the system generates an embedding for the query.
 6.  **Information Retrieval**: The system queries the ChromaDB database to find the most relevant text chunks (passages) based on the query embedding.
-7.  **Answer Generation**: The retrieved passages are combined with the original query into a detailed prompt. This prompt is then passed to a Gemini generative model, which produces a comprehensive answer based _only_ on the provided information.
+7.  **Answer Generation**: The original query and the retrieved passages are compiled into a comprehensive prompt. This prompt is then passed to the `gemini-2.0-flash` model to generate a fluent, informative answer based _only_ on the provided context.
 8.  **Interactive QA**: The system provides a command-line interface where you can continuously ask questions about the document.
 
 ## Features
@@ -88,3 +88,26 @@ Here's a screenshot of the program running:
 - **PDF Processing**: `pypdf`
 - **Environment Variables**: `python-dotenv`
 - **HTTP Requests**: `requests`
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/dhlananhh/Build_RAG_System_with_Gemini_and_ChromaDB/blob/main/LICENSE) file for details.
+
+---
